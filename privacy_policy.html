@@ -45,16 +45,34 @@
       text-align: center; font-size: 13px; color: #888;
       margin-top: 60px;
     }
+    .lang-bar { margin-top: 14px; display: flex; gap: 8px; justify-content: center; }
+    .lang-bar button {
+      font: inherit; font-size: 14px; font-weight: 600; cursor: pointer;
+      background: rgba(255,255,255,0.18); color: white;
+      border: 1px solid rgba(255,255,255,0.5); border-radius: 99px; padding: 4px 14px;
+    }
+    .lang-bar button.on { background: white; color: #FF6B35; }
+    [data-lang] { display: none; }
+    [data-lang].on { display: block; }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Privacy Policy</h1>
-  <p>Pop Tower &nbsp;·&nbsp; Last updated: October 14, 2026</p>
+  <h1 data-lang="en" class="on">Privacy Policy</h1>
+  <h1 data-lang="tr">Gizlilik Politikası</h1>
+  <h1 data-lang="pt">Política de Privacidade</h1>
+  <p data-lang="en" class="on">Pop Tower &nbsp;·&nbsp; Last updated: October 14, 2026</p>
+  <p data-lang="tr">Pop Tower &nbsp;·&nbsp; Son güncelleme: 14 Ekim 2026</p>
+  <p data-lang="pt">Pop Tower &nbsp;·&nbsp; Última atualização: 14 de outubro de 2026</p>
+  <div class="lang-bar">
+    <button type="button" data-set="en">English</button>
+    <button type="button" data-set="tr">Türkçe</button>
+    <button type="button" data-set="pt">Português</button>
+  </div>
 </header>
 
-<main>
+<main data-lang="en" class="on" lang="en">
 
   <section>
     <h2>Overview</h2>
@@ -228,6 +246,10 @@
         <strong>Turkey (KVKK):</strong> Right to be informed, access, correction,
         deletion, and objection to processing of personal data.
       </li>
+      <li>
+        <strong>Brazil (LGPD):</strong> Right to confirm that processing exists,
+        access, correct, anonymise or delete your data, and revoke consent.
+      </li>
     </ul>
     <p>
       To exercise any of these rights, contact us at
@@ -267,9 +289,473 @@
 
 </main>
 
+<main data-lang="tr" lang="tr">
+  <section>
+    <h2>Genel Bakış</h2>
+    <p>
+      Pop Tower, <strong>Ocalyptus Studios</strong> ("biz") tarafından geliştirilir ve
+      yayınlanır. Bu Gizlilik Politikası, Pop Tower'ı oynarken hangi verilerin
+      toplandığını, nasıl kullanıldığını ve bu veriler üzerindeki haklarınızı açıklar.
+    </p>
+    <p>
+      Pop Tower'ı indirerek veya oynayarak bu politikada açıklanan uygulamaları kabul
+      etmiş olursunuz. Kabul etmiyorsanız lütfen uygulamayı kullanmayın.
+    </p>
+  </section>
+
+  <section>
+    <h2>Topladığımız Veriler</h2>
+    <p>Verileri üç yolla topluyoruz: reklam ortağımız aracılığıyla otomatik olarak,
+    oyun ölçüm sağlayıcımız aracılığıyla (izin gereken yerlerde yalnızca izninizle)
+    ve cihazınızda yerel olarak.</p>
+
+    <div class="card">
+      <strong>Otomatik toplananlar (Google AdMob aracılığıyla)</strong>
+      <ul style="margin-top:10px;">
+        <li>Reklam kimliği (iOS'ta IDFA / Android'de GAID)</li>
+        <li>Cihaz modeli, işletim sistemi sürümü, dil ve saat dilimi</li>
+        <li>IP adresi (genel bölgeyi tahmin etmek için kullanılır, tarafımızca saklanmaz)</li>
+        <li>Reklam gösterim ve etkileşim olayları</li>
+        <li>Yaklaşık konum (ülke/bölge düzeyinde, IP'den çıkarılır)</li>
+      </ul>
+    </div>
+
+    <div class="card" style="margin-top:12px;">
+      <strong>Oyun ölçümü (GameAnalytics aracılığıyla)</strong>
+      <ul style="margin-top:10px;">
+        <li>Cihazınızda uygulama için oluşturulan rastgele, anonim bir kimlik</li>
+        <li>Oyun olayları: oyun oturumları, skor ve ilerleme, mağaza ve görev kullanımı</li>
+        <li>Reklam olayları: izlenen reklamlar, tamamlanan ödüllü reklamlar ve yüklenemeyen reklamlar</li>
+        <li>Oyun içi altın kazanma ve harcama (yalnızca sanal para, gerçek para yok)</li>
+        <li>Cihaz modeli, işletim sistemi sürümü, dil ve ülke (IP'den çıkarılır)</li>
+      </ul>
+    </div>
+
+    <div class="card" style="margin-top:12px;">
+      <strong>Yalnızca cihazınızda saklananlar</strong>
+      <ul style="margin-top:10px;">
+        <li>En yüksek skorunuz, altınlarınız, açtığınız öğeler, ayarlarınız ve görev
+        ilerlemeniz (cihazınızdan hiç çıkmaz)</li>
+      </ul>
+    </div>
+
+    <p style="margin-top:16px;">
+      Şunları <strong>toplamayız</strong>: adınız, e-posta adresiniz, telefon numaranız,
+      hassas GPS konumunuz, rehberiniz, fotoğraflarınız, mikrofon girişi veya herhangi
+      bir sağlık verisi.
+    </p>
+  </section>
+
+  <section>
+    <h2>Verilerinizi Nasıl Kullanıyoruz</h2>
+    <p>AdMob aracılığıyla toplanan veriler şunlar için kullanılır:</p>
+    <ul>
+      <li>Ücretsiz oyunu desteklemek için ilgili reklamları göstermek</li>
+      <li>Reklam performansını ölçmek ve dolandırıcılığı önlemek</li>
+    </ul>
+    <p>GameAnalytics aracılığıyla toplanan veriler şunlar için kullanılır:</p>
+    <ul>
+      <li>Oyunun nasıl oynandığına dair toplu istatistikler (örneğin kaç oyuncunun
+      ertesi gün geri döndüğü veya oyuncuların nerede oynamayı bıraktığı)</li>
+      <li>Oyun dengesini, ödülleri ve reklam sıklığını iyileştirmek; buna uygulama
+      güncellemesi olmadan oyun ayarlarını uzaktan değiştirmek de dahildir</li>
+    </ul>
+    <p>Kişisel verilerinizi <strong>satmayız</strong>. Verilerinizi yukarıda
+    listelenenler dışında hiçbir amaçla kullanmayız.</p>
+  </section>
+
+  <section>
+    <h2>Üçüncü Taraf Hizmetler</h2>
+    <p>Pop Tower aşağıdaki üçüncü taraf SDK'ları kullanır:</p>
+    <div class="card">
+      <strong>Google AdMob</strong> &nbsp;
+      <span class="chip">Reklam</span>
+      <span class="chip">Analiz</span>
+      <p style="margin-top:10px; font-size:15px;">
+        Google, yukarıda açıklanan verileri kendi gizlilik politikasına uygun olarak
+        kullanabilir. Politikayı şu adreste inceleyebilirsiniz:
+        <a href="https://policies.google.com/privacy" target="_blank">
+          policies.google.com/privacy
+        </a>.
+        <br>
+        Kişiselleştirilmiş reklamları kapatmak için:
+        <a href="https://www.google.com/settings/ads" target="_blank">
+          google.com/settings/ads
+        </a>.
+      </p>
+    </div>
+    <div class="card">
+      <strong>GameAnalytics</strong> &nbsp;
+      <span class="chip">Analiz</span>
+      <p style="margin-top:10px; font-size:15px;">
+        GameAnalytics, yukarıda açıklanan ölçüm verilerini bizim adımıza işler.
+        Gizlilik politikasını şu adreste inceleyebilirsiniz:
+        <a href="https://gameanalytics.com/privacy" target="_blank">
+          gameanalytics.com/privacy
+        </a>.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>İzin (AB, Birleşik Krallık ve İsviçre)</h2>
+    <p>
+      Yasanın izin gerektirdiği yerlerde Pop Tower, oyunu ilk açtığınızda bir izin
+      formu gösterir. Oyun ölçümü yalnızca bu formda aşağıdaki amaçların hepsine
+      izin verirseniz çalışır: cihazda bilgi saklama ve/veya erişme, reklam
+      performansını ölçme, içerik performansını ölçme, istatistiklerle kitleyi
+      anlama ve hizmetleri geliştirme ve iyileştirme.
+    </p>
+    <p>
+      Reddederseniz veya seçiminiz doğrulanamazsa (örneğin internet bağlantısı
+      yoksa) <strong>hiçbir ölçüm verisi gönderilmez</strong> ve uzaktan oyun ayarları
+      indirilmez. Oyun her iki durumda da tam olarak çalışır.
+    </p>
+    <p>
+      İzninizi daha sonra geri çekerseniz ölçüm durur ve gönderilmeyi bekleyen veriler
+      cihazınızdan silinir. Seçiminizi değiştirmek için uygulamanın verilerini temizleyin
+      (<strong>Ayarlar → Uygulamalar → Pop Tower → Depolama → Verileri temizle</strong>);
+      izin formu yeniden gösterilir.
+    </p>
+  </section>
+
+  <section>
+    <h2>Uygulama İzleme Şeffaflığı (iOS)</h2>
+    <p>
+      iOS 14.5 ve sonrasında, Apple'ın Uygulama İzleme Şeffaflığı çerçevesi
+      aracılığıyla, cihazınızın reklam kimliğini (IDFA) kullanarak etkinliğinizi
+      izlemek için izninizi isteriz.
+    </p>
+    <p>
+      Bu izni reddederseniz reklamları görmeye devam edersiniz ancak reklamlar daha az
+      kişiselleştirilmiş olur. Seçiminiz ne olursa olsun oyunun tüm özellikleri tam
+      olarak çalışır. Kararınızı istediğiniz zaman
+      <strong>Ayarlar → Gizlilik ve Güvenlik → İzleme</strong> bölümünden
+      değiştirebilirsiniz.
+    </p>
+  </section>
+
+  <section>
+    <h2>Çocukların Gizliliği</h2>
+    <p>
+      Pop Tower <strong>13 yaş ve üzeri genel kitle</strong> için tasarlanmıştır ve 13
+      yaşın altındaki çocuklara yönelik değildir. 13 yaşın altındaki çocuklardan
+      bilerek kişisel bilgi toplamayız. Bir çocuğun bize kişisel bilgi verdiğini
+      düşünüyorsanız lütfen bizimle iletişime geçin; bu bilgiyi derhal sileriz.
+    </p>
+  </section>
+
+  <section>
+    <h2>Haklarınız</h2>
+    <p>Bulunduğunuz yere bağlı olarak aşağıdaki haklara sahip olabilirsiniz:</p>
+    <ul>
+      <li>
+        <strong>AB / AEA (GDPR):</strong> Verilerinize erişme, düzeltme, silme,
+        işlemeyi kısıtlama ve taşıma hakkı. Ayrıca işlemeye itiraz edebilir ve
+        izninizi istediğiniz zaman geri çekebilirsiniz.
+      </li>
+      <li>
+        <strong>Kaliforniya (CCPA):</strong> Hangi verilerin toplandığını öğrenme,
+        silinmesini talep etme ve kişisel bilgilerin "satışını" reddetme hakkı
+        (kişisel bilgileri satmayız).
+      </li>
+      <li>
+        <strong>Türkiye (KVKK):</strong> Bilgilendirilme, erişim, düzeltme, silme ve
+        kişisel verilerin işlenmesine itiraz hakkı.
+      </li>
+      <li>
+        <strong>Brezilya (LGPD):</strong> İşlemenin varlığını doğrulama, verilere
+        erişme, düzeltme, anonimleştirme veya silme ve izni geri çekme hakkı.
+      </li>
+    </ul>
+    <p>
+      Bu haklardan herhangi birini kullanmak için bize şu adresten ulaşın:
+      <a href="mailto:ocalyptusstudios@gmail.com">ocalyptusstudios@gmail.com</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Verilerin Saklanması</h2>
+    <p>
+      Oyun ilerlemeniz cihazınızda yerel olarak saklanır ve uygulamayı kaldırdığınızda
+      silinir. Google AdMob tarafından toplanan reklam verileri Google'ın kendi saklama
+      politikalarına tabidir. GameAnalytics tarafından toplanan ölçüm verileri
+      GameAnalytics'in saklama politikalarına tabidir.
+    </p>
+  </section>
+
+  <section>
+    <h2>Bu Politikadaki Değişiklikler</h2>
+    <p>
+      Bu Gizlilik Politikasını zaman zaman güncelleyebiliriz. Güncellediğimizde
+      sayfanın üstündeki "Son güncelleme" tarihini değiştiririz. Değişikliklerden sonra
+      Pop Tower'ı kullanmaya devam etmeniz yeni politikayı kabul ettiğiniz anlamına gelir.
+    </p>
+  </section>
+
+  <section>
+    <h2>İletişim</h2>
+    <p>
+      Bu Gizlilik Politikasıyla ilgili sorular veya talepler:
+    </p>
+    <div class="card">
+      <strong>Ocalyptus Studios</strong><br>
+      Bağımsız Oyun Stüdyosu
+    </div>
+  </section>
+
+</main>
+
+<main data-lang="pt" lang="pt-BR">
+  <section>
+    <h2>Visão geral</h2>
+    <p>
+      O Pop Tower é desenvolvido e publicado pela <strong>Ocalyptus Studios</strong>
+      ("nós"). Esta Política de Privacidade explica quais dados são coletados quando
+      você joga Pop Tower, como eles são usados e quais direitos você tem sobre eles.
+    </p>
+    <p>
+      Ao baixar ou jogar Pop Tower, você concorda com as práticas descritas nesta
+      política. Se não concordar, por favor não use o aplicativo.
+    </p>
+  </section>
+
+  <section>
+    <h2>Dados que coletamos</h2>
+    <p>Coletamos dados de três formas: automaticamente pelo nosso parceiro de
+    publicidade, pelo nosso provedor de análise de jogos (somente com o seu
+    consentimento onde ele é exigido) e localmente no seu dispositivo.</p>
+
+    <div class="card">
+      <strong>Coletados automaticamente (pelo Google AdMob)</strong>
+      <ul style="margin-top:10px;">
+        <li>Identificador de publicidade (IDFA no iOS / GAID no Android)</li>
+        <li>Modelo do dispositivo, versão do sistema operacional, idioma e fuso horário</li>
+        <li>Endereço IP (usado para estimar a região geral, não é armazenado por nós)</li>
+        <li>Eventos de exibição e interação com anúncios</li>
+        <li>Localização aproximada (em nível de país/região, obtida pelo IP)</li>
+      </ul>
+    </div>
+
+    <div class="card" style="margin-top:12px;">
+      <strong>Análise do jogo (pelo GameAnalytics)</strong>
+      <ul style="margin-top:10px;">
+        <li>Um identificador aleatório e anônimo criado para o aplicativo no seu dispositivo</li>
+        <li>Eventos do jogo: sessões de jogo, pontuação e progresso, uso da loja e das missões</li>
+        <li>Eventos de anúncios: anúncios exibidos, anúncios premiados concluídos e anúncios que não carregaram</li>
+        <li>Moedas do jogo ganhas e gastas (somente moeda virtual, sem dinheiro real)</li>
+        <li>Modelo do dispositivo, versão do sistema operacional, idioma e país (obtido pelo IP)</li>
+      </ul>
+    </div>
+
+    <div class="card" style="margin-top:12px;">
+      <strong>Armazenados somente no seu dispositivo</strong>
+      <ul style="margin-top:10px;">
+        <li>Seu recorde, suas moedas, itens desbloqueados, configurações e progresso
+        das missões (nunca saem do seu dispositivo)</li>
+      </ul>
+    </div>
+
+    <p style="margin-top:16px;">
+      <strong>Não</strong> coletamos: seu nome, endereço de e-mail, número de telefone,
+      localização GPS precisa, contatos, fotos, áudio do microfone ou qualquer dado de saúde.
+    </p>
+  </section>
+
+  <section>
+    <h2>Como usamos os seus dados</h2>
+    <p>Os dados coletados pelo AdMob são usados para:</p>
+    <ul>
+      <li>Exibir anúncios relevantes para manter o jogo gratuito</li>
+      <li>Medir o desempenho dos anúncios e prevenir fraudes</li>
+    </ul>
+    <p>Os dados coletados pelo GameAnalytics são usados para:</p>
+    <ul>
+      <li>Estatísticas agregadas sobre como o jogo é jogado (por exemplo, quantos
+      jogadores voltam no dia seguinte ou em que ponto os jogadores param de jogar)</li>
+      <li>Melhorar o equilíbrio do jogo, as recompensas e a frequência de anúncios,
+      incluindo ajustar configurações do jogo remotamente, sem atualizar o aplicativo</li>
+    </ul>
+    <p><strong>Não</strong> vendemos os seus dados pessoais. Não usamos os seus dados
+    para nenhuma finalidade além das listadas acima.</p>
+  </section>
+
+  <section>
+    <h2>Serviços de terceiros</h2>
+    <p>O Pop Tower usa os seguintes SDKs de terceiros:</p>
+    <div class="card">
+      <strong>Google AdMob</strong> &nbsp;
+      <span class="chip">Publicidade</span>
+      <span class="chip">Análise</span>
+      <p style="margin-top:10px; font-size:15px;">
+        O Google pode usar os dados descritos acima de acordo com a própria política
+        de privacidade, disponível em
+        <a href="https://policies.google.com/privacy" target="_blank">
+          policies.google.com/privacy
+        </a>.
+        <br>
+        Para desativar anúncios personalizados, acesse
+        <a href="https://www.google.com/settings/ads" target="_blank">
+          google.com/settings/ads
+        </a>.
+      </p>
+    </div>
+    <div class="card">
+      <strong>GameAnalytics</strong> &nbsp;
+      <span class="chip">Análise</span>
+      <p style="margin-top:10px; font-size:15px;">
+        O GameAnalytics processa os dados de análise descritos acima em nosso nome.
+        A política de privacidade dele está disponível em
+        <a href="https://gameanalytics.com/privacy" target="_blank">
+          gameanalytics.com/privacy
+        </a>.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Consentimento (UE, Reino Unido e Suíça)</h2>
+    <p>
+      Onde a lei exige consentimento, o Pop Tower mostra um formulário de
+      consentimento quando você abre o jogo pela primeira vez. A análise do jogo só
+      funciona se você consentir com todas as finalidades a seguir nesse formulário:
+      armazenar e/ou acessar informações no dispositivo, medir o desempenho dos
+      anúncios, medir o desempenho do conteúdo, entender o público por meio de
+      estatísticas e desenvolver e melhorar serviços.
+    </p>
+    <p>
+      Se você recusar, ou se a sua escolha não puder ser confirmada (por exemplo, sem
+      conexão com a internet), <strong>nenhum dado de análise é enviado</strong> e as
+      configurações remotas do jogo não são baixadas. O jogo funciona normalmente em
+      qualquer caso.
+    </p>
+    <p>
+      Se você retirar o consentimento depois, a análise para e os dados que aguardavam
+      envio são apagados do seu dispositivo. Para mudar a sua escolha, limpe os dados
+      do aplicativo (<strong>Configurações → Apps → Pop Tower → Armazenamento → Limpar
+      dados</strong>) e o formulário de consentimento será exibido novamente.
+    </p>
+  </section>
+
+  <section>
+    <h2>Transparência no Rastreamento de Apps (iOS)</h2>
+    <p>
+      No iOS 14.5 e posterior, pedimos sua permissão para rastrear sua atividade
+      usando o identificador de publicidade do dispositivo (IDFA), por meio da
+      estrutura de Transparência no Rastreamento de Apps da Apple.
+    </p>
+    <p>
+      Se você negar essa permissão, continuará vendo anúncios, mas eles serão menos
+      personalizados. Todos os recursos do jogo funcionam normalmente,
+      independentemente da sua escolha. Você pode mudar a sua decisão a qualquer
+      momento em <strong>Ajustes → Privacidade e Segurança → Rastreamento</strong>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Privacidade de crianças</h2>
+    <p>
+      O Pop Tower é destinado ao <strong>público geral a partir de 13 anos</strong> e
+      não é direcionado a crianças menores de 13 anos. Não coletamos intencionalmente
+      informações pessoais de crianças menores de 13 anos. Se você acredita que uma
+      criança nos forneceu informações pessoais, entre em contato conosco e as
+      apagaremos imediatamente.
+    </p>
+  </section>
+
+  <section>
+    <h2>Seus direitos</h2>
+    <p>Dependendo de onde você está, você pode ter os seguintes direitos:</p>
+    <ul>
+      <li>
+        <strong>UE / EEE (GDPR):</strong> Direito de acessar, corrigir, apagar,
+        restringir ou transferir os seus dados. Você também pode se opor ao tratamento
+        e retirar o consentimento a qualquer momento.
+      </li>
+      <li>
+        <strong>Califórnia (CCPA):</strong> Direito de saber quais dados são coletados,
+        pedir a exclusão e recusar a "venda" de informações pessoais (não vendemos
+        informações pessoais).
+      </li>
+      <li>
+        <strong>Turquia (KVKK):</strong> Direito de ser informado, de acesso, correção,
+        exclusão e de oposição ao tratamento de dados pessoais.
+      </li>
+      <li>
+        <strong>Brasil (LGPD):</strong> Direito de confirmar a existência de
+        tratamento, acessar, corrigir, anonimizar ou eliminar os seus dados e revogar
+        o consentimento.
+      </li>
+    </ul>
+    <p>
+      Para exercer qualquer um desses direitos, fale conosco em
+      <a href="mailto:ocalyptusstudios@gmail.com">ocalyptusstudios@gmail.com</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Retenção de dados</h2>
+    <p>
+      O seu progresso no jogo é armazenado localmente no seu dispositivo e é apagado
+      quando você desinstala o aplicativo. Os dados de publicidade coletados pelo
+      Google AdMob seguem as políticas de retenção do próprio Google. Os dados de
+      análise coletados pelo GameAnalytics seguem as políticas de retenção do
+      GameAnalytics.
+    </p>
+  </section>
+
+  <section>
+    <h2>Alterações nesta política</h2>
+    <p>
+      Podemos atualizar esta Política de Privacidade de tempos em tempos. Quando isso
+      acontecer, atualizaremos a data de "Última atualização" no topo da página.
+      Continuar usando o Pop Tower após as alterações significa que você aceita a nova
+      política.
+    </p>
+  </section>
+
+  <section>
+    <h2>Contato</h2>
+    <p>
+      Dúvidas ou solicitações sobre esta Política de Privacidade:
+    </p>
+    <div class="card">
+      <strong>Ocalyptus Studios</strong><br>
+      Estúdio de jogos independente
+    </div>
+  </section>
+
+</main>
+
 <footer>
   <p>© 2026 Ocalyptus Studios · Pop Tower</p>
 </footer>
+
+<script>
+  // Dil: ?lang=tr|en|pt > tarayıcı dili > İngilizce. JavaScript kapalıysa İngilizce görünür.
+  (function () {
+    var langs = ["en", "tr", "pt"];
+    function pick() {
+      var q = new URLSearchParams(location.search).get("lang");
+      if (q && langs.indexOf(q) >= 0) return q;
+      var n = (navigator.language || "en").slice(0, 2).toLowerCase();
+      return langs.indexOf(n) >= 0 ? n : "en";
+    }
+    function show(l) {
+      document.querySelectorAll("[data-lang]").forEach(function (el) {
+        el.classList.toggle("on", el.getAttribute("data-lang") === l);
+      });
+      document.querySelectorAll(".lang-bar button").forEach(function (b) {
+        b.classList.toggle("on", b.getAttribute("data-set") === l);
+      });
+      document.documentElement.lang = l === "pt" ? "pt-BR" : l;
+    }
+    document.querySelectorAll(".lang-bar button").forEach(function (b) {
+      b.addEventListener("click", function () { show(b.getAttribute("data-set")); });
+    });
+    show(pick());
+  })();
+</script>
 
 </body>
 </html>
